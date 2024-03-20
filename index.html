@@ -1,52 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="utf-8" />
+   <title>Swiper demo</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
    <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-   <title>Light and Dark Mode Page</title>
 </head>
+
 <body>
-   <section>
-      <div class="toggle-btn">
-         <i class="fas fa-adjust"></i>
-      </div>
-      <div class="container">
-         <div class="content">
-            <div class="content-image">
-               <img src="img/img.jpg" alt="Forest Landscape Picture">
-            </div>
-            <div class="content-text">
-               <h1 class="title">The Forest</h1>
-               <h2 class="subtitle">It's a jungle out there</h2>
-               <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias similique et, fugiat est aut culpa expedita provident doloribus quas vero laboriosam consequatur facere error in. Consequatur cumque illo fugiat exercitationem?</p>
-               <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, nihil vitae! Blanditiis, nemo repellat repellendus beatae id adipisci corporis pariatur explicabo officia. Dolore eum labore perspiciatis. Corporis esse quam minus quae quasi temporibus architecto! Eligendi molestias id quas excepturi sit!</p>
-               <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem autem voluptate debitis tempora accusantium. Voluptatibus aperiam esse fugiat beatae ipsam perspiciatis enim, pariatur magni dolorem modi odio, labore, delectus dolorum doloribus est incidunt! Vero, quam eveniet est, ad quos mollitia, voluptas non eaque consequuntur quia atque? Iusto itaque numquam voluptatem!</p>
-               <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quas.</p>
-               <a href="#" class="cta">Learn More &rarr;</a>
-            </div>
+
+   <header>
+      <h1>PAU MIRABET <span>cinematographer</span></h1>
+      <nav>
+         <ul>
+            <li><a href="#work">WORK</a></li>
+            <li><a href="#bio">BIO</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li>
+               <a class="theme-toggle" href="#">☼</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <section class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <figure class="swiper-slide">
+               <img src="http://paumirabet.com/wp-content/uploads/2024/03/TMWWTSIA_1.60.1.jpg" alt="TMWWTSIA_1.60.1">
+               <figcaption>
+                  <h2>Unwanted</h2>
+                  2023 · TV Series · SKY
+               </figcaption>
+            </figure>
+            <figure class="swiper-slide">
+               <img src="http://paumirabet.com/wp-content/uploads/2024/03/TheQuantumDevil_careta-scaled.jpg"
+                  alt="The Quantum Devil">
+               <figcaption>
+                  <h2>The Quantum Devil</h2>
+                  2023 · TV Film · MAX
+               </figcaption>
+            </figure>
+            <figure class="swiper-slide">
+               <img src="http://paumirabet.com/wp-content/uploads/2024/03/TheGhostsOfMonday_careta-scaled.jpg"
+                  alt="TheGhostsOfMonday_careta">
+               <figcaption>
+                  <h2>The Ghosts Of Monday</h2>
+                  2022 · TV Series · Netflix
+               </figcaption>
+            </figure>
          </div>
-      </div>
+         <!-- <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div> -->
+         <div class="swiper-pagination"></div>
+      </section>
+
+      <section id="work" class="content">
+         <h2>WORK</h2>
+     
+      </section>
+
+      <section id="bio" class="content">
+
+         <h2>BIO</h2>
+         <figure>
+            <img src="paumirabet.jpg">
+         </figure>
+         <p>
+            As of my last update in January 2022, there isn't a widely recognized cinematographer named Pau Mirabet in
+            the mainstream film industry. It's possible that Pau Mirabet could be a lesser-known or emerging talent, or
+            they could be involved in a specific niche or regional film scene. Without further context, it's challenging
+            to provide more information about them. If Pau Mirabet has gained prominence in the film industry since
+            then, I wouldn't have information on their career beyond that point.
+         </p>
+
+      </section>
+
+      <section id="work" class="content">
+         <h2>AWARDS</h2>
+     
+      </section>
+
+      <section id="work" class="content">
+         <h2>CONTACT</h2>
+     
+      </section>
+
+   </main>
+
+
+
+   <!-- Swiper JS -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+   <!-- Initialize Swiper -->
+   <script>
+      var swiper = new Swiper(".mySwiper", {
+         // slidesPerView: 2,
+         speed: 2500,
+         loop: true,
+         effect: "fade",
+         mousewheel: true,
+         autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+         },
+         navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+         },
+         pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+         },
+      });
+   </script>
+
+
+   <section style="text-align:center; padding: 4rem 2rem; border-top: 1px dotted #ccc; margin-top: 4rem;">
+      <a href="#" target="_blank" nofolow><img src="kitdigital.svg"></a>
    </section>
+
+   <footer style="border-top: 1px dotted #ccc;"> 
+      <div>
+         <strong>{PM}</strong> © 2024 · 
+         Developed in Barcelona by <a href="https://xarop.com" target="_blank">xarop.com</a> ·
+      </div>
+      
+      <nav><ul><li><a href="#">top ↑</a></li></ul></nav>
+   </footer>
+
+
+  
+
+
    <script>
       let body = document.body;
-      let toggleBtn = document.querySelector('.toggle-btn');
+      let toggleBtn = document.querySelector('.theme-toggle');
       let currentTheme = localStorage.getItem('currentTheme');
 
-      if(currentTheme) {
-         body.classList.add('dark-theme');
+      if (currentTheme) {
+         body.classList.add('light-theme');
       }
 
       toggleBtn.addEventListener('click', () => {
-         body.classList.toggle('dark-theme');
+         body.classList.toggle('light-theme');
 
-         if(body.classList.contains('dark-theme')){
+         if (body.classList.contains('light-theme')) {
             localStorage.setItem('currentTheme', 'activeTheme');
          } else {
             localStorage.removeItem('currentTheme');
          }
       })
    </script>
+
 </body>
+
 </html>

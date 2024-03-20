@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="toggle-btn">
+            TOGGLE
+        </div>
+    </header>
+ 
+    <main class="mySwiper">
+        <div class="swiper-wrapper">
+            <figure class="swiper-slide">
+                <img src="http://paumirabet.com/wp-content/uploads/2024/01/Unwanted2-e1705319944650.png" alt="">
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+            <figure class="swiper-slide">
+                <img src="http://paumirabet.com/wp-content/uploads/2024/01/Unwanted2-e1705319944650.png" alt="">
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+            <figure class="swiper-slide">
+                <img src="http://paumirabet.com/wp-content/uploads/2024/01/Unwanted2-e1705319944650.png" alt="">
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+            <figure class="swiper-slide">
+                <img src="http://paumirabet.com/wp-content/uploads/2024/01/Unwanted2-e1705319944650.png" alt="">
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+        </div>
+        <div class="swiper-pagination"></div>
+    </main>
+
+    <footer>
+        Hola
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script>
+        let body = document.body;
+        let toggleBtn = document.querySelector('.toggle-btn');
+        let currentTheme = localStorage.getItem('currentTheme');
+
+        if (currentTheme) {
+            body.classList.add('light-theme');
+        }
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+
+            if (body.classList.contains('light-theme')) {
+                localStorage.setItem('currentTheme', 'activeTheme');
+            } else {
+                localStorage.removeItem('currentTheme');
+            }
+        })
+    </script>
+
+</body>
+
+</html>
